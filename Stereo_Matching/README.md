@@ -30,7 +30,7 @@ disp = computeDisp(img_left, img_right, MAX_DISPARITY)
     - **Step 1: Cost Computation (Census Cost)**
       - We utilize a 3x3 window size for [census cost](http://www.cs.cornell.edu/~rdz/Papers/ZW-ECCV94.pdf) calculation. The census cost refers to the Hamming distance between the census transforms of the left and right images. To obtain the census transform of a pixel, we encode the relative order of pixel intensities within a window centered at that pixel as a binary string. Moreover, any pixels beyond the image boundaries are filled with the value of the nearest neighboring pixel.
     - **Step 2: Cost Aggregation (Guided Filter)**
-      - After the previous step, a cost map of size *MAX_DISPARITY* $\times$ *H* $\times$ *W* is obtained. The guided filter is then applied using the original image as the guide, resulting in a smoother cost map.
+      - After the previous step, a cost map of size *MAX_DISPARITY* $\times$ *H* $\times$ *W* &nbsp;is obtained. The guided filter is then applied using the original image as the guide, resulting in a smoother cost map.
     - **Step 3: Disparity optimization (Winner-Take-All)**
       - The disparity map is obtained by identifying the minimum cost disparity at the pixel level from the modified cost map in the previous step, resulting in a disparity map with the same dimensions as the original image.
     - **Step 4: Disparity Refinement (Left-Right Consistency Check + Weighted Median Filtering)**
