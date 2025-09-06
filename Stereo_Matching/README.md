@@ -8,7 +8,7 @@
 - opencv-contrib-python
 
 ##### Usage
-The class of stereo matching is implemented in [computeDisp.py](./computeDisp.py).
+The function of stereo matching is implemented in [computeDisp.py](./computeDisp.py).
 ```python
 # Open the left and right images
 img_left = cv2.imread(IMAGE_LEFT_PATH)
